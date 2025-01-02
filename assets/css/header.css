@@ -1,0 +1,108 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.header::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('/assets/img/icons/header.svg');
+
+}
+
+.header .photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.header .title {
+  text-align: center;
+  font-family: "Neue Machina";
+}
+.information {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.information p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0.5rem;
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.information p::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 0.5rem;
+}
+
+.information .social::before {
+  background-image: url("/assets/img/icons/social.svg");
+}
+
+.information .mail::before {
+  background-image: url("/assets/img/icons/mail.svg");
+}
+
+.information .localization::before {
+  background-image: url("/assets/img/icons/localization.svg");
+}
+
+.information .contact::before {
+  background-image: url("/assets/img/icons/contact.svg");
+}
+
+/* MEDIA QUERIES 
+
+(Min-width:) Aplica estilos a partir de certa largura, ou seja, os estilos começam a ser aplicados quando a largura mínima da tela é atingida.
+
+(Max-width:) Aplica estilos até certa largura, ou seja, os estilos são aplicados somente até a tela atingir a largura máxima especificada.
+
+*/
+
+/* Como desenvolvemos pela técnica Mobile First, agora, podemos desenvolver apenas para as telas de desktop, oq torna um CSS mais enxuto/simples. 
+(min-width: 600px) -> irá aplicar assim que chegar nos 600px de largura *min-width* ; e manterá esse CSS a diante, a partir dos 600px.    */
+
+@media only screen and (min-width: 768px) {
+  .header {
+    display: grid;
+    grid-template-areas:
+      "photo title"
+      "photo information";
+  }
+
+  .header .photo {
+    grid-area: photo;
+    margin: 0 auto;
+  }
+
+  .header .title {
+    grid-area: title;
+    text-align: start;
+    max-width: 210px;
+  }
+
+  .header .information {
+    grid-area: information;
+  }
+}

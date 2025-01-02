@@ -1,6 +1,6 @@
 {
   "name": "Guilherme Sanches",
-  "photo": "https://avatars.githubusercontent.com/u/160994960?v=4",
+  "photo": "https://drive.google.com/file/d/1bDgy3d34aFEun9YVskTRUtYMvbBouHVC/view",
   "job": "Junior Developer at Flapper",
   "location": "São Paulo - SP",
   "phone": "(11) 93149-1332",
@@ -40,11 +40,7 @@
       "Organização"
     ]
   },
-  "languages": [
-    "Português BR",
-    "Inglês (intermediário)",
-    "Espanhol (básico)"
-  ],
+  "languages": ["Português BR", "Inglês (intermediário)", "Espanhol (básico)"],
   "portfolio": [
     {
       "name": "Curso Ministrado na DIO para a criação de uma Pokedex",

@@ -6,8 +6,21 @@ function updateProfileInfo(profileData) {
     photo.alt = profileData.name
 
     const name = document.getElementById('profile.name')
-    name.innerHTML = ` ${profileData.name}`
+    name.innerHTML = ` &lt;/${profileData.name}&gt;`;
 
+    const social = document.getElementById('profile.job')
+    social.innerHTML = `${profileData.job}`
+
+    const location = document.getElementById('profile.location')
+    location.innerHTML = `${profileData.location}`
+
+    const phone = document.getElementById('profile.phone')
+    phone.innerHTML = `${profileData.phone}`
+    phone.href = `tel:${profileData.phone}`
+
+    const email = document.getElementById('profile.email')
+    email.innerHTML = `${profileData.email}`
+    email.href = `mailto:${profileData.email}`
 
 }
 

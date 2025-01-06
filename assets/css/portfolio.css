@@ -37,3 +37,16 @@
     margin-right: .5rem;
 }
 
+@media only screen and (max-width: 768px) {
+    .portfolio li h3.github::before {
+        content: "";
+        display: inline-block;
+        width: 3rem;
+        height: 1.2rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('/assets/img/icons/github.svg');
+        margin-right: .5rem;
+    }
+  }
+

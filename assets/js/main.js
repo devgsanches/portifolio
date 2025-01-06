@@ -22,7 +22,9 @@ function updateProfileInfo(profileData) {
     email.innerHTML = `${profileData.email}`
     email.href = `mailto:${profileData.email}`
 
-    // softskills
+}
+
+function updateSoftSkills(profileData) {
     const softSkills = document.getElementById('profile.skills.softSkills')
     const listSkills = profileData.skills.softSkills
     const softInLi = listSkills.map((sf) => {
@@ -31,9 +33,11 @@ function updateProfileInfo(profileData) {
     ).join('')
 
     softSkills.innerHTML = softInLi
+}
 
-
-
+function updateHardSkills(profileData) {
+    const hardSkills = document.getElementById('profile.skills.hardSkills')
+    console.log(hardSkills);
 
 }
 
@@ -41,4 +45,6 @@ function updateProfileInfo(profileData) {
 
     const profileData = await fetchProfileData() // a partir destes dados, iremos começar a 'distribuir' dinâmicamente em nosso HTML
     updateProfileInfo(profileData)
+    updateSoftSkills(profileData)
+    updateHardSkills(profileData)
 })()
